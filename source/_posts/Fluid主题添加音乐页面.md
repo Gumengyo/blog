@@ -13,7 +13,7 @@ date: 2023-03-05 14:07:00
     原文地址：<a href="https://blog.csdn.net/weixin_43471926/article/details/109798928?spm=1001.2014.3001.5502" target="_blank">https://blog.csdn.net/weixin_43471926/article/details/109798928?spm=1001.2014.3001.5502</a>
 </p>
 
-**效果预览：**https://www.jishuqin.cn/playlist/
+**效果预览：** https://www.jishuqin.cn/playlist/
 
 <img src="https://cdn.jishuqin.cn//202303051412252.png" style="zoom:50%;" />
 
@@ -28,6 +28,8 @@ npm install --save hexo-tag-aplayer
 ## 二、添加配置
 
 安装好插件之后，在主题配置文件<span class="label label-primary">_config.fluid.yml </span>中的 custom 添加下面 js 和 css 依赖。
+
+<p class="note note-warning">注意：cdn.jsdelivr.net 域名有时会被墙，最好把文件部到自己的OSS，或者保存到博客的js、css目录下。</p>
 
 ```
 custom_js:

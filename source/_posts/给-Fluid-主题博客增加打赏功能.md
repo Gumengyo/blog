@@ -142,11 +142,13 @@ Hexo 5.0.0 版本以上的用户，在博客目录下创建 `_config.fluid.yml` 
 const rewardBtn = document.getElementById('rewardBtn');
 const rewardImgContainer = document.getElementById('rewardImgContainer');
 
-rewardBtn.onclick = () => {
-    rewardImgContainer.style.display = (rewardImgContainer.style.display === 'none' || rewardImgContainer.style.display === '') ? 'inline-flex' : 'none'
-    setTimeout(() => {
-        rewardImgContainer.style.opacity = (rewardImgContainer.style.opacity === '0' || rewardImgContainer.style.opacity === '') ? '1' : '0'
-	}, 10);
+if(rewardBtn){
+	rewardBtn.onclick = () => {
+		rewardImgContainer.style.display = (rewardImgContainer.style.display === 'none' || rewardImgContainer.style.display === '') ? 'inline-flex' : 'none'
+		setTimeout(() => {
+			rewardImgContainer.style.opacity = (rewardImgContainer.style.opacity === '0' || rewardImgContainer.style.opacity === '') ? '1' : '0'
+		}, 10);
+	}
 }
 ```
 

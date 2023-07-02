@@ -199,3 +199,6 @@ markdown:
   plugins:
     - "@traptitech/markdown-it-katex"
    
+# 配置 Rss 订阅
+Plugins: 
+- hexo-generate-feed

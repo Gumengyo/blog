@@ -233,24 +233,28 @@ font:
 # Specify the path of your custom js file, support list. The path is relative to the source directory, such as `/js/custom.js` corresponding to the directory `source/js/custom.js`
 custom_js: 
     # - //cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js # 樱花飘落
-    - //cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js  #/APlayer#/APlayer依赖
-    - //cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js  #/APlayer依赖
-    - //cdn.jsdelivr.net/gh/graingert/wow@1.3.0/dist/wow.min.js # wow依赖
+    - //cdn.jishuqin.cn/blog/APlayer.min.js  #/APlayer#/APlayer依赖
+    - //cdn.jishuqin.cn/blog/Meting.min.js  #/APlayer依赖
+    - //cdn.jishuqin.cn/blog/wow.min.js # wow依赖
+    - //cdn.jishuqin.cn/blog/star.min.js # 鼠标跟随小星星
     - /js/wow_init.js
-    - /js/twikoo.js
     - /js/reward.js
+    - /js/loading.js
     
 
 
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
 custom_css:
-    - //cdn.jsdelivr.net/gh/bynotes/texiao/source/css/shubiao.css # 鼠标指针
-    - //cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css   #/APlayer依赖
+    - //cdn.jishuqin.cn/blog/shubiao.css # 鼠标指针
+    - //cdn.jishuqin.cn/blog/APlayer.min.css   #/APlayer依赖
     - /css/twikoo.css
-    - //cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.cs
+    # - //cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.cs
     - /css/font_ybwaieb31r/iconfont.css
+    - /css/font_mcfotbatm2l/iconfont.css
     - /css/reward.css
+    - /css/loading.css
+
 
 # 网页访问统计
 # Analysis of website visitors
@@ -360,34 +364,44 @@ navbar:
   # 导航栏菜单，可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称
   # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
   menu:
-    - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
-    - { key: "主站", link: "https://jishuqin.cn", icon: "iconfont icon-th-large" }
+    - { key: "home", link: "/", icon: "iconfont icon-home-fill", event_key : "Navigation-Homepage" }
+    - {
+      key: '站点',
+      icon: 'iconfont icon-th-large',
+      submenu: [
+        { key: "主站", link: "https://jishuqin.cn", icon: "iconfont icon-wangzhan", event_key : "Navigation-Mainpage" },
+        { key: "站点监控", link: "https://kuma.jishuqin.cn/status/main", icon: "iconfont icon-codeforces", event_key : "Navigation-Monitor" },
+        { key: "站点分析", link: "http://47.115.210.241:3000/share/AgKZSxrpHHI8PMBr/顾梦の博客", icon: "iconfont icon-tongji", event_key : "Navigation-Analysis" }
+      ]
+    }
     - {
       key: '文章',
       icon: 'iconfont icon-books',
       submenu: [
-        { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" },
-        { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" },
-        { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
+        { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" , event_key : "Navigation-Archive" },
+        { key: "category", link: "/categories/", icon: "iconfont icon-category-fill", event_key : "Navigation-Category" },
+        { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" , event_key : "Navigation-Tag" }
       ]
     } 
-    - { key: "音乐", link: "/playlist/", icon: "iconfont icon-music" }
+    - { key: "音乐", link: "/playlist/", icon: "iconfont icon-music" , event_key : "Navigation-Music" }
     - {
       key: '社交',
       icon: 'iconfont icon-friends',
       submenu: [
-        { key: "links", link: "/links/", icon: "iconfont icon-link-fill" },
-        { key: "朋友圈", link: "/fcircle/", icon: "iconfont icon-users" },
-        { key: "开往", link: "https://www.travellings.cn/go.html", icon: "iconfont icon-busdaba" },
+        { key: "links", link: "/links/", icon: "iconfont icon-link-fill" , event_key : "Navigation-Links"  },
+        { key: "RSS订阅", link: "https://blog.jishuqin.cn/atom.xml", icon: "iconfont icon-rss" , event_key : "Navigation-Rss"  },
+        { key: "朋友圈", link: "/fcircle/", icon: "iconfont icon-users" , event_key : "Navigation-Fcircle"},
+        { key: "开往", link: "https://www.travellings.cn/go.html", icon: "iconfont icon-busdaba" , event_key : "Navigation-Goto" },
       ]
     }     
+    - { key: "留言板", link: "/tellme/", icon: "iconfont icon-comment", event_key : "Navigation-Comment" }
     - {
       key: '个人',
       icon: 'iconfont icon-user-fill',
       submenu: [
-        { key: "about", link: "/about/", icon: "iconfont icon-addrcard" },
-        { link: "https://gumeng.jishuqin.cn",icon: "iconfont icon-briefcase",name: "网盘"},
-        { key: "读书", link: "/booklist/", icon: "iconfont icon-book" }
+        { key: "about", link: "/about/", icon: "iconfont icon-addrcard", event_key : "Navigation-About" },
+        { link: "https://gumeng.jishuqin.cn",icon: "iconfont icon-briefcase",name: "网盘", event_key : "Navigation-Cloudreve"},
+        { key: "读书", link: "/booklist/", icon: "iconfont icon-book", event_key : "Navigation-BookList" }
       ]
     } 
     
@@ -466,9 +480,9 @@ footer:
   # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
   content: '
-    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span class="umami--click--Footer-Hexo">Hexo</span></a>
     <span class="with-love"><img src="https://cdn.jishuqin.cn/duck.gif" alt="" height="35" style="display:inline-block;vertical-align:middle" data-loaded="true" class="lozaded"> </span>
-    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span class="umami--click--Footer-Fluid">Fluid</span></a>
     <div style="font-size: 0.85rem">
       <span>本站由</span>
       <span class="with-love"><img src="https://cdn.jishuqin.cn//qiniuyun.png" alt="" height="35" style="display:inline-block;vertical-align:middle" data-loaded="true" class="lozaded"> </span>
@@ -1077,7 +1091,7 @@ links:
     - title: 葱苓
       intro: Dare && Do
       link: https://blog.itciraos.cn
-      avatar: https://gcore.jsdelivr.net/gh/ciraos/ciraos-static@main/img/2022-12-30-23-26-12.webp
+      avatar: https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/avatar1.webp
     
     - title: 呆鱼
       intro: 命运之所以称为命运，正是因为它无可改变。
@@ -1134,11 +1148,6 @@ links:
       link: https://blog.zuilang.tk
       avatar: https://image.licic.net/i/2023/05/30/6475cc6f9d002.png
       
-    - title: 醉里
-      intro: 小豪的个人博客
-      link: https://202271.xyz
-      avatar: https://202271.xyz/images/uploads/android-chrome-192x192.png
-      
     - title: Revincx
       intro: 可爱就是正义~
       link: https://blog.revincx.icu/
@@ -1174,6 +1183,20 @@ links:
       link: https://tiaq.cn/
       avatar: https://tiaq.cn/tx.jpg
       
+    - title: Leonus
+      intro: 进一寸有进一寸的欢喜。
+      link: https://blog.leonus.cn/
+      avatar: https://q1.qlogo.cn/g?b=qq&nk=990320751&s=5   
+      
+    - title: Mhare的个人博客
+      intro: 欢迎来到我的个人博客
+      link: http://www.mingzib.xyz/
+      avatar: http://www.static.mingzib.xyz/blogUploadFile/configImage/5d4cbfe057a649b4b1c7b9a9ea607015.jpg
+      
+    - title: 又见苍岚
+      intro: 蓝天依旧，明眸如初
+      link: https://www.zywvvd.com
+      avatar: https://www.zywvvd.com/image/avatar.png
       
 
   # 当成员头像加载失败时，替换为指定图片
