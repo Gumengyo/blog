@@ -13,7 +13,7 @@ date: 2023-03-05 14:07:00
     原文地址：<a href="https://blog.csdn.net/weixin_43471926/article/details/109798928?spm=1001.2014.3001.5502" target="_blank">https://blog.csdn.net/weixin_43471926/article/details/109798928?spm=1001.2014.3001.5502</a>
 </p>
 
-**效果预览：** https://www.jishuqin.cn/playlist/
+**效果预览：** https://blog.jishuqin.cn/playlist/
 
 <img src="https://cdn.jishuqin.cn//202303051412252.png" style="zoom:50%;" />
 
