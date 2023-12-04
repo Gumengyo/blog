@@ -1,9 +1,7 @@
----
 title: 留言板
-date: 2023-06-28 23:06:06
 comment: true
+date: 2023-06-28 23:06:06
 ---
-
 <style>
 body, div, h1,h2, form, fieldset, footer,p {
 	margin: 0; padding: 0; border: 0; outline: none;
@@ -24,15 +22,15 @@ h1 {margin-bottom:20px; text-align:center;font-size:48px; text-shadow:0 1px 0 #e
 	#form_wrap:before {content:"";
 		position:absolute;
 		bottom:128px;left:0px;
-		background:url('https://101.43.39.125/HexoFiles/images/before.png');
+		background:url('https://cdn.jishuqin.cn/blog/before.png');
 		width:530px;height: 316px;}
 	#form_wrap:after {content:"";position:absolute;
 		bottom:0px;left:0;
-		background:url('https://101.43.39.125/HexoFiles/images/after.png');
+		background:url('https://cdn.jishuqin.cn/blog/after.png');
 		width:530px;height: 260px; }
 	#form_wrap.hide:after, #form_wrap.hide:before {display:none; }
 	#form_wrap:hover {height:806px;top:-30px;}
-	form {background:#f7f2ec url('https://101.43.39.125/HexoFiles/images/letter_bg.png'); 
+	form {background:#f7f2ec url('https://cdn.jishuqin.cn/blog/letter_bg.png'); 
 		position:relative;top:200px;overflow:hidden;
 		height:200px;width:400px;margin:0px auto;padding:20px; 
 		border: 1px solid #fff;

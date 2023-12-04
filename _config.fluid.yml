@@ -233,10 +233,10 @@ font:
 # Specify the path of your custom js file, support list. The path is relative to the source directory, such as `/js/custom.js` corresponding to the directory `source/js/custom.js`
 custom_js: 
     # - //cdn.jsdelivr.net/gh/bynotes/texiao/source/js/yinghua.js # 樱花飘落
-    - //cdn.jishuqin.cn/blog/APlayer.min.js  #/APlayer#/APlayer依赖
+    - //cdn.jishuqin.cn/blog/APlayer.min.js #/APlayer#/APlayer依赖
     - //cdn.jishuqin.cn/blog/Meting.min.js  #/APlayer依赖
     - //cdn.jishuqin.cn/blog/wow.min.js # wow依赖
-    - //cdn.jishuqin.cn/blog/star.min.js # 鼠标跟随小星星
+    # - //cdn.jishuqin.cn/blog/star.min.js # 鼠标跟随小星星
     - /js/wow_init.js
     - /js/reward.js
     - /js/loading.js
@@ -247,7 +247,7 @@ custom_js:
 # The usage is the same as custom_js
 custom_css:
     - //cdn.jishuqin.cn/blog/shubiao.css # 鼠标指针
-    - //cdn.jishuqin.cn/blog/APlayer.min.css   #/APlayer依赖
+    - //cdn.jishuqin.cn/blog/APlayer.min.css #/APlayer依赖
     - /css/twikoo.css
     # - //cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.cs
     - /css/font_ybwaieb31r/iconfont.css
@@ -371,7 +371,7 @@ navbar:
       submenu: [
         { key: "主站", link: "https://jishuqin.cn", icon: "iconfont icon-wangzhan", event_key : "Navigation-Mainpage" },
         { key: "站点监控", link: "https://kuma.jishuqin.cn/status/main", icon: "iconfont icon-codeforces", event_key : "Navigation-Monitor" },
-        { key: "站点分析", link: "http://47.115.210.241:3000/share/AgKZSxrpHHI8PMBr/顾梦の博客", icon: "iconfont icon-tongji", event_key : "Navigation-Analysis" }
+        # { key: "站点分析", link: "http://47.115.210.241:3000/share/AgKZSxrpHHI8PMBr/顾梦の博客", icon: "iconfont icon-tongji", event_key : "Navigation-Analysis" }
       ]
     }
     - {
@@ -1021,6 +1021,8 @@ about:
   icons:
     - { class: "iconfont icon-github-fill", link: "https://github.com/gumengyo", tip: "GitHub" }
     - { class: "iconfont icon-gitee-fill", link: "https://gitee.com/gumengyo", tip: "码云" }
+    - { class: "iconfont icon-bilibili", link: "https://space.bilibili.com/270421693", tip: "bilibili" }
+    - { class: "iconfont icon-code", link: "https://leetcode.cn/u/4uPnRR7aGE/", tip: "leetcode" }
     - { class: "iconfont icon-mail", link: "mailto:374943980@qq.com",tip: "邮箱"}
 
 
@@ -1077,6 +1079,12 @@ links:
       intro: 生活明朗，万物可爱
       link: https://blog.anheyu.com/
       avatar: https://img01.anheyu.com/useruploads/90/2023/04/23/6444e85234e51.jpg 
+      
+    - title: 杜老师说
+      intro: 师者，传道，授业，解惑！
+      link: https://dusays.com
+      avatar: https://cdn.dusays.com/avatar.png
+      
     
     - title: twintea's blog🐣
       intro: May all the beauty be blessed.
@@ -1088,9 +1096,9 @@ links:
       link: https://blog.dabing.cool
       avatar: https://blog.dabing.cool/images/avatar.jpg
     
-    - title: 葱苓
+    - title: 葱苓sama
       intro: Dare && Do
-      link: https://blog.itciraos.cn
+      link: https://blog.ciraos.top
       avatar: https://cdn.jsdelivr.net/gh/ciraos/ciraos-static@main/img/avatar1.webp
     
     - title: 呆鱼
@@ -1143,10 +1151,10 @@ links:
       link: https://www.clcou.com
       avatar: https://pic.imgdb.cn/item/6274c7be09475431292fd345.jpg
       
-    - title: 醉浪の博客
+    - title: 秋澪Akimio
       intro: 一只喜欢七彩球的枯叶蝶
-      link: https://blog.zuilang.tk
-      avatar: https://image.licic.net/i/2023/05/30/6475cc6f9d002.png
+      link: https://blog.akimio.top/
+      avatar: https://img.akimio.top/avatar/akimio.png
       
     - title: Revincx
       intro: 可爱就是正义~
@@ -1203,7 +1211,77 @@ links:
       link: https://jiangsihan.cn/
       avatar: https://jiangsihan.cn/logo
       
+    - title: 轻笑Chuckle
+      intro: 漫天倾尘,风中轻笑
+      link: https://www.qcqx.cn
+      avatar: https://www.qcqx.cn/img/head.webp
 
+    - title: Tianlin_Zz
+      intro: 正因为是一张白纸 才可以随心所欲地描绘地图
+      link: https://linjiangyu.com
+      avatar: https://cdn1.tianli0.top/gh/linjiangyu2/halo/img/fa.jpg     
+      
+    - title: 低调小熊猫
+      intro: 读万卷书，行万里路，赚很多钱
+      link: https://ilovey.live
+      avatar: https://uss.ilovey.live/img/avatar.jpg    
+     
+    - title: 云晓晨CatchWang
+      intro: 未来路远 • 勿忘初心
+      link: https://blog.catchyun.com
+      avatar: https://cdn.catchyun.com/favicon.ico
+     
+    - title: lomtom
+      intro: 云原生、devops、kubernetes
+      link: https://lomtom.cn/
+      avatar: https://lomtom.cn/images/avatar.png
+      
+    - title: 染念
+      intro: 炼丹难，炼丹苦
+      link: https://dyedd.cn/
+      avatar: https://q1.qlogo.cn/g?b=qq&nk=1176996982&s=100
+      
+    - title: 蓝莓
+      intro: 据说最高级的快乐有三种：自律，爱，创造
+      link: https://lanm.love
+      avatar: https://lanm.love/img/3.ico
+      
+    - title: L
+      link: https://luoyuanxiang.top
+      avatar: https://gcore.jsdelivr.net/gh/luoyuanxiang/images@master/202308051650041.png
+      intro: 天行健，君子以自强不息；地势坤，君子以厚德载物
+      
+    - title: Zyx的小窝
+      intro: Zyx的小窝，经常写一些教程、技术类文章。每月不定期水文章
+      link: https://blog.mczyx.online/
+      avatar: https://q2.qlogo.cn/headimg_dl?dst_uin=2078170660&spec=100
+      
+    - title: Fgaoxing
+      intro: 一个少年的博客
+      link: https://www.yt-blog.top/
+      avatar: https://npm.elemecdn.com/ytblogimg/webp/logo.webp
+      
+    - title: pidanxia’ s Blog
+      intro: 一个有梦想的程序员～
+      link: https://pidanxia.ink/
+      avatar: https://pidanxia.ink/wp-content/uploads/2023/09/pidanxia.jpg
+      
+    - title: 芸熙の小屋
+      intro: 即使生命如尘，仍愿岁月如歌
+      link: https://stvue.com/
+      avatar: http://store-tu.sdn.stvue.com/2022/04/02/6247410a43f6a.jpg
+      
+    - title: 竹子
+      intro: 
+      link: https://zhuzi.dev/
+      avatar: https://pic1.rpgsky.net/imgcn/moepic/2023/10/20/4741a81ec1513092303ac6e24e85c632.jpg
+      
+    - title: 〇°
+      intro: 今天快乐
+      avatar: https://lingdu.love/favicon.ico
+      link: https://lingdu.love
+    
+      
   # 当成员头像加载失败时，替换为指定图片
   # When the member avatar fails to load, replace the specified image
   onerror_avatar: /img/avatar.png
@@ -1212,10 +1290,28 @@ links:
   # Custom content at the bottom of the links
   custom:
     enable: true
-    content: '<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><div class="markdown-body">
-<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># 你的站点信息</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">title:</span> <span class="hljs-comment">#网站的名字</span><br>  <span class="hljs-attr">intro:</span> <span class="hljs-comment">#简短描述</span><br>  <span class="hljs-attr">link:</span> <span class="hljs-comment">#您的网址</span><br>  <span class="hljs-attr">avatar:</span> <span class="hljs-comment">#您的头像</span><br>	<br><span class="hljs-comment"># 我的站点信息</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">title:</span> <span class="hljs-string">顾梦</span><br>  <span class="hljs-attr">intro:</span> <span class="hljs-string">不想满心遗憾，那就全力以赴.</span><br>  <span class="hljs-attr">link:</span> <span class="hljs-string">https://blog.jishuqin.cn</span><br>  <span class="hljs-attr">avatar:</span> <span class="hljs-string">https://cloud.jishuqin.cn/avatar.png</span><br>  <span class="hljs-attr">siteshot:</span> <span class="hljs-string">https://cloud.jishuqin.cn/siteshot.png</span><br></code><div class="code-widget copy-btn code-widget-light" data-clipboard-snippet=""><i class="iconfont icon-copy"></i>YAML</div></pre></td></tr></tbody></table></figure>
-  </div><hr><p>友链须知：</p><ul class="note note-warning"><li>网站已备案，并稳定运行【建站时间 >= 2个月】</li><li>无任何不良内容和违法内容坚持原创更新，无抄袭，无侵权，无政治</li><li>会定时清理长时间不更新的，无法访问的友链</li><li>博客拥有独立的一级域名或顶级域名</li></ul>
-   '
+    content: '<hr>
+<p>在下方留言申请加入我的友链，按如下格式提供信息：</p>
+<code class="prismjs yaml">
+  # 你的站点信息<br>
+  - title: #网站的名字<br>
+  &nbsp;&nbsp;intro: #简短描述<br>
+  &nbsp;&nbsp;link: #您的网址<br>
+  &nbsp;&nbsp;avatar: #您的头像<br><br>
+  # 我的站点信息<br>- title: 顾梦<br>
+  &nbsp;&nbsp;intro: 不想满心遗憾，那就全力以赴.<br>
+  &nbsp;&nbsp;link: https://blog.jishuqin.cn<br>
+  &nbsp;&nbsp;avatar: https://cloud.jishuqin.cn/avatar.png<br>
+  &nbsp;&nbsp;siteshot: https://cloud.jishuqin.cn/siteshot.png
+  </code>
+
+<hr><p>友链须知：</p>
+<ul class="note note-warning">
+<li>网站已备案，并稳定运行【建站时间 >= 2个月】</li>
+<li>无任何不良内容和违法内容坚持原创更新，无抄袭，无侵权，无政治</li>
+<li>会定时清理长时间不更新的，无法访问的友链</li>
+<li>博客拥有独立的一级域名或顶级域名</li>
+</ul>'
    
   # 评论插件
   # Comment plugin
